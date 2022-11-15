@@ -1,9 +1,13 @@
 import Image from 'next/image';
 import info from '../../../data/info.json'
 import { GoPrimitiveDot } from 'react-icons/go';
+
+import parse from 'html-react-parser';
+
 export const revalidate = 60;
 
 const Info = () => {
+    
     return (
         <div className="info w-full relative ">
             <div className="cover w-full h-60 md:h-72 lg:h-80 relative ">
@@ -41,8 +45,8 @@ const Info = () => {
                 <h1>Episodes List</h1>
             </div>
 
-            <div className="description  bg-zinc-800 p-4 mb-44  min-h-fit max-h-44 rounded-lg max-w-fit overflow-hidden mx-4 xl:mx-auto">
-                <p className='line-clamp-3 opacity-80 text-sm max-w-6xl mx-auto'>{info.description}</p>
+            <div className="description  bg-zinc-800 p-4 mb-44  min-h-fit max-h-fit rounded-lg max-w-fit overflow-hidden mx-4 xl:mx-auto">              
+                {parse(`<p className=' opacity-80 text-sm max-w-6xl mx-auto tracking-wide'>${info.description}</p>`)}
             </div>
         </div>
     );
