@@ -7,12 +7,12 @@ const Info = () => {
         <div className="info w-full ">
             <div className="cover w-full h-64 md:h-72 lg:h-80 relative ">
                 <div className="gradient absolute w-full h-full bg-gradient-to-t from-zinc-900 to-transparent z-10 "></div>
-                <Image src={info.cover} layout='fill' className='object-cover z-0' />
+                <Image src={info.cover} alt={info.title.romaji} layout='fill' className='object-cover z-0' />
             </div>
 
             <div className="info h-44 lg:h-60 w-full flex px-4 lg:px-8 tracking-wider ">
                 <div className="image relative bottom-16 w-36 h-52 lg:w-44 lg:h-64 rounded-2xl truncate border-4 border-zinc-800 shrink-0 z-20">
-                    <Image src={info.image} layout='fill' className='object-cover min-w-max' />
+                    <Image src={info.image} alt={info.title.romaji} layout='fill' className='object-cover min-w-max' />
                 </div>
                 <div className="main-info px-4 mb-2">
                     <h1 className=' text-lg md:text-2xl line-clamp-2 mb-4'>{info.title.romaji}</h1>
@@ -34,7 +34,7 @@ const Info = () => {
                 </div>
             </div>
 
-            <div className="description  bg-zinc-800 p-4 mb-44 min-h-fit max-h-44 rounded-lg w-[90%] mx-auto overflow-hidden ">
+            <div className="description  bg-zinc-800 p-4 mb-44 mt-8 min-h-fit max-h-44 rounded-lg w-[90%] mx-auto overflow-hidden ">
                 <p className='line-clamp-3'>{info.description}</p>
             </div>
         </div>

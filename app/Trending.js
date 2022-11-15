@@ -8,7 +8,7 @@ const Trending = () => {
             {trend.results.map(anime => (
                 <Link href={`/info/${anime.id}`}><div className="card w-44">
                     <div className="image w-full h-64 relative rounded-xl truncate">
-                        <Image src={anime.image} layout={'fill'} />
+                        <Image src={anime.image} alt={anime.title.romaji} layout={'fill'} />
                     </div>
                     <h1 className='text-white line-clamp-2'>{anime.title.english}</h1>
                 </div></Link>
