@@ -16,7 +16,7 @@ const Info = () => {
             </div>
 
             <div className="info max-h-fit lg:h-60 w-full flex relative bottom-16 items-end px-2 lg:px-8 tracking-wider -mb-8 z-20">
-                <div className="image relative w-36 h-52 lg:w-44 lg:h-64 rounded-2xl truncate border-4 border-zinc-800 shrink-0 ">
+                <div className="image relative w-36 h-52 lg:w-44 lg:h-64 rounded-2xl truncate border-[6px] border-zinc-900 shrink-0 ">
                     <Image src={info.image} alt={info.title.romaji} layout='fill' className='object-cover min-w-max' />
                 </div>
                 <div className="main-info px-2 mb-2 max-h-fit md:ml-2">

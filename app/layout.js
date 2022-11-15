@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
       <head>
       </head>
       <body className='bg-zinc-900 lg:ml-20 text-amber-50'>
-        <div className="nav relative z-10">
+        <div className="nav relative z-50">
           <Navbar />
         </div>
         <div className="main z-0">
