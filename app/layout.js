@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <head />
-      <body className='bg-zinc-900 lg:ml-20 text-white'>
+      <body className='bg-zinc-900 lg:ml-20 text-amber-50'>
         <div className="nav relative z-10">
           <Navbar />
         </div>
