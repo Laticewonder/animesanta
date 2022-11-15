@@ -15,7 +15,7 @@ const Info = () => {
                     <Image src={info.image} alt={info.title.romaji} layout='fill' className='object-cover min-w-max' />
                 </div>
                 <div className="main-info px-4 mb-2">
-                    <h1 className=' text-lg md:text-2xl line-clamp-2 mb-4'>{info.title.romaji}</h1>
+                    <h1 className=' text-2xl md:text-4xl line-clamp-2 mb-4'>{info.title.romaji}</h1>
                     <div className="flex space-x-4 mb-1 text-sm lg:text-base">
                         <h1>{info.totalEpisodes} episodes</h1>
                         <h2>{info.type}</h2>
@@ -35,7 +35,7 @@ const Info = () => {
             </div>
 
             <div className="description  bg-zinc-800 p-4 mb-44 mt-8 min-h-fit max-h-44 rounded-lg w-[90%] mx-auto overflow-hidden ">
-                <p className='line-clamp-3'>{info.description}</p>
+                <p className='line-clamp-3 opacity-80 text-sm'>{info.description}</p>
             </div>
         </div>
     );
