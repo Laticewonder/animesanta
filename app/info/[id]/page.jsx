@@ -36,13 +36,13 @@ const Info = () => {
             </div>
 
             <div className="nav flex max-w-xl mx-auto justify-around mb-4">
-                <h1>Overview</h1>
+                <h1 className='border-b-2 border-purple-500'>Overview</h1>
                 <h1>Reviews</h1>
                 <h1>Episodes List</h1>
             </div>
 
-            <div className="description  bg-zinc-800 p-4 mb-44  min-h-fit max-h-44 rounded-lg w-[90%] mx-auto overflow-hidden ">
-                <p className='line-clamp-3 opacity-80 text-sm'>{info.description}</p>
+            <div className="description  bg-zinc-800 p-4 mb-44  min-h-fit max-h-44 rounded-lg max-w-fit overflow-hidden mx-4 xl:mx-auto">
+                <p className='line-clamp-3 opacity-80 text-sm max-w-6xl mx-auto'>{info.description}</p>
             </div>
         </div>
     );
