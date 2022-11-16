@@ -26,9 +26,9 @@ const Header = () => {
                     </div>
                     <div className="flex flex-col text-xs lg:text-sm">
                         <h1 className=''><span className='opacity-80'>score</span> <span className='opacity-100 text-purple-400'>{info.rating}</span></h1>
-                        <div className="flex items-end space-x-1 mt-1">
+                        <div className="flex items-center space-x-1 mt-1">
                             <h1 className='opacity-80 font-bold'> {info.status}</h1>
-                            <GoPrimitiveDot className='text-green-400 font-bold' />
+                            <GoPrimitiveDot className='text-green-400 text-lg' />
                         </div>
                     </div>
                 </div>
