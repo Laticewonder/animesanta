@@ -10,7 +10,7 @@ const Header = () => {
                 <Image src={info.cover} alt={info.title.romaji} layout='fill' className='object-cover z-0' />
             </div>
 
-            <div className="info max-h-fit lg:h-60 w-full flex relative bottom-16 items-end px-2 lg:px-8 tracking-wider -mb-8 z-20">
+            <div className="info max-h-fit mx-auto lg:h-60 max-w-6xl flex relative bottom-16 items-end px-2 tracking-wider -mb-8 z-20">
                 <div className="image relative w-36 h-52 lg:w-44 lg:h-64 rounded-2xl truncate border-4 border-zinc-900 shrink-0 ">
                     <Image src={info.image} alt={info.title.romaji} layout='fill' className='object-cover min-w-max' />
                 </div>
