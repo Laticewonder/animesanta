@@ -31,13 +31,13 @@ const Overview = () => {
                             <div className="image relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} layout='fill' className='object-cover' />
                             </div>
-                            <h1 className='text-xs lg:text-sm font-medium mt-2 opacity-90 mb-1'>{item.title.userPreferred}</h1>
+                            <h1 className='text-xs lg:text-sm font-medium mt-2 opacity-90 mb-1 tracking-wide'>{item.title.userPreferred}</h1>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="characters border">
+            <div className="characters">
                 <h1 className='mb-2 font-semibold text-lg'>Characters</h1>
                 <div className="cards flex overflow-x-auto gap-4 ">
                     {info.characters.map((item=>(
@@ -45,7 +45,7 @@ const Overview = () => {
                             <div className="image w-24 h-24 relative rounded-lg truncate mb-2 ">
                                 <Image src={item.image} layout='fill' className='object-cover'/>
                             </div>
-                            <h1 className='text-xs lg:text-sm opacity-90 tracking-wide mb-1'>{item.name.full}</h1>
+                            <h1 className='text-xs lg:text-sm font-medium mt-2 opacity-90 mb-1 tracking-wide'>{item.name.full}</h1>
                         </div>
                     )))}
                 </div>
@@ -59,7 +59,7 @@ const Overview = () => {
                             <div className="image relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} layout='fill' className='object-cover' />
                             </div>
-                            <h1 className='text-xs lg:text-sm font-medium mt-2 opacity-90 mb-1'>{item.title.userPreferred}</h1>
+                            <h1 className='text-xs lg:text-sm font-medium mt-2 opacity-90 mb-1 tracking-wide'>{item.title.userPreferred}</h1>
                         </div>
                     ))}
                 </div>
