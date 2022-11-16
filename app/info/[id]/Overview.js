@@ -17,10 +17,11 @@ const Overview = () => {
     return (
         <div className="overview mb-16 min-h-fit max-w-6xl md:mx-auto overflow-hidden p-4 mt-8 space-y-6 ">
             <div className="description bg-zinc-800 p-4 pb-0 rounded-lg">
-                <div className="para overflow-hidden md:w-3/4 mx-auto" style={{ height: showMe ? "max-content" : "100px" }} >
-                    {parse(`<p className='opacity-80 text-sm tracking-wide mb-4 mx-auto  '>${info.description}</p>`)}
+                <div className="para overflow-hidden md:w-3/4 mx-auto" style={{ height: showMe ? "max-content" : "130px" }} >
+                    <h1 className='mb-4 border-b-2 border-purple-500'>Description</h1>
+                    {parse(`<p className='opacity-80 text-sm tracking-wide mb-4 mx-auto leading-relaxed'>${info.description}</p>`)}
                 </div>
-                <button onClick={toggle} className='select-none bg-zinc-800 mx-auto w-full pt-2 text-purple-500'>{showMe ? <IoIosArrowUp className=' w-full text-2xl' /> : <IoIosArrowDown className=' w-full text-2xl' />}</button>
+                <button onClick={toggle} className='select-none outline-none bg-zinc-800 mx-auto w-full pt-2 text-purple-500'>{showMe ? <IoIosArrowUp className=' w-full text-2xl' /> : <IoIosArrowDown className=' w-full text-2xl' />}</button>
             </div>
 
             <div className="relations ">
