@@ -5,3 +5,9 @@
 :root {
     -webkit-tap-highlight-color: transparent;
 }
+
+@layer components {
+    .title-third {
+      @apply text-xs lg:text-sm font-medium mt-2 opacity-90 mb-1 tracking-wide;
+    }
+  }

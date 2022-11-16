@@ -5,6 +5,7 @@ import info from '../../../data/info.json'
 import parse from 'html-react-parser';
 import { useState } from 'react';
 
+
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 const Overview = () => {
@@ -15,7 +16,7 @@ const Overview = () => {
     }
 
     return (
-        <div className="overview mb-16 min-h-fit max-w-6xl md:mx-auto overflow-hidden p-4 mt-8 space-y-6 ">
+        <div className="overview mb-16 min-h-fit max-w-6xl md:mx-auto overflow-hidden p-4 space-y-6 ">
             <div className="description bg-zinc-800 p-4 pb-0 rounded-lg">
                 <div className="para overflow-hidden md:w-3/4 mx-auto" style={{ height: showMe ? "max-content" : "130px" }} >
                     <h1 className='mb-4 border-b-2 border-purple-500'>Description</h1>
@@ -32,7 +33,7 @@ const Overview = () => {
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} layout='fill' className='object-cover' />
                             </div>
-                            <h1 className='  text-xs lg:text-sm font-medium mt-2 opacity-90 mb-1 tracking-wide'>{item.title.userPreferred}</h1>
+                            <h1 className=''>{item.title.userPreferred}</h1>
                         </div>
                     ))}
                 </div>
@@ -41,12 +42,12 @@ const Overview = () => {
             <div className="characters">
                 <h1 className='mb-2 text-lg select-none'>Characters</h1>
                 <div className="cards flex overflow-x-auto gap-4 ">
-                    {info.characters.map((item=>(
+                    {info.characters.map((item => (
                         <div className="card">
                             <div className="image select-none w-24 h-24 relative rounded-lg truncate mb-2 ">
-                                <Image src={item.image} layout='fill' className='object-cover'/>
+                                <Image src={item.image} layout='fill' className='object-cover' />
                             </div>
-                            <h1 className='text-xs  lg:text-sm font-medium mt-2 opacity-90 mb-1 tracking-wide'>{item.name.full}</h1>
+                            <h1 className='title-third'>{item.name.full}</h1>
                         </div>
                     )))}
                 </div>
@@ -60,7 +61,7 @@ const Overview = () => {
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} layout='fill' className='object-cover select-none' />
                             </div>
-                            <h1 className='text-xs  lg:text-sm font-medium mt-2 opacity-90 mb-1 tracking-wide'>{item.title.userPreferred}</h1>
+                            <h1 className='title-third'>{item.title.userPreferred}</h1>
                         </div>
                     ))}
                 </div>

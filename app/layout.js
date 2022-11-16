@@ -15,11 +15,11 @@ export default function RootLayout({ children }) {
     <html className={poppins.className}>
       <head>
       </head>
-      <body className='bg-zinc-900 lg:ml-20 text-amber-50'>
+      <body className='bg-zinc-900 lg:ml-20 mb-20 lg:mb-4 text-amber-50'>
         <div className="nav relative z-50">
           <Navbar />
         </div>
-        <div className="main z-0">
+        <div className="main z-0 ">
           {children}
         </div>
       </body>

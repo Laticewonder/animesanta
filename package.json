@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@consumet/extensions": "^1.2.8",
     "@next/font": "^13.0.3",
     "dompurify": "^2.4.1",
     "html-react-parser": "^3.0.4",

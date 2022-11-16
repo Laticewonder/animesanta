@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import info from '../../../data/info.json'
 import { GoPrimitiveDot } from 'react-icons/go';
+import Link from 'next/link';
 
-const Header = () => {
+const Header = ({params:id}) => {
     return (
-        <div className="header w-full relative">
+        <div className="header w-full relative mb-4 lg:mb-8 select-none">
             <div className="cover w-full h-60 md:h-72 lg:h-80 relative ">
                 <div className="gradient absolute w-full h-full bg-gradient-to-t from-zinc-900 to-transparent z-10 "></div>
                 <Image src={info.cover} alt={info.title.romaji} layout='fill' className='object-cover z-0' />
@@ -32,6 +33,11 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="nav flex max-w-xl text-sm mx-auto justify-around mb-4">
+                <Link href={`/info/${id}`}><button className='focus:border-b-2 focus:border-purple-500'>Overview</button></Link>
+                <Link href={`/info/${id}/reviews`}><button className='focus:border-b-2 focus:border-purple-500'>Reviews</button></Link>
+                <Link href={`/info/${id}/EpisodeList`}><button className= 'focus:border-b-2 focus:border-purple-500'>Episodes List</button></Link>
             </div>
         </div>
     );
