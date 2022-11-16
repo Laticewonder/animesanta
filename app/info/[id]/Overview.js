@@ -15,7 +15,7 @@ const Overview = () => {
     }
 
     return (
-        <div className="overview mb-16 min-h-fit max-w-6xl md:mx-auto overflow-hidden m-4 mt-8 space-y-8 ">
+        <div className="overview mb-16 min-h-fit max-w-6xl md:mx-auto overflow-hidden m-4 mt-8 space-y-6 ">
             <div className="description bg-zinc-800 p-4 pb-0 rounded-lg">
                 <div className="para overflow-hidden" style={{ height: showMe ? "max-content" : "100px" }} >
                     {parse(`<p className='opacity-80 text-sm tracking-wide mb-4 mx-auto max-w-prose '>${info.description}</p>`)}
@@ -24,7 +24,7 @@ const Overview = () => {
             </div>
 
             <div className="relations ">
-                <h1 className='mb-2 font-semibold text-lg'>Relations</h1>
+                <h1 className='mb-2 text-lg'>Relations</h1>
                 <div className="cards flex gap-4">
                     {info.relations.map(item => (
                         <div className="card">
@@ -38,7 +38,7 @@ const Overview = () => {
             </div>
 
             <div className="characters">
-                <h1 className='mb-2 font-semibold text-lg'>Characters</h1>
+                <h1 className='mb-2 text-lg'>Characters</h1>
                 <div className="cards flex overflow-x-auto gap-4 ">
                     {info.characters.map((item=>(
                         <div className="card">
@@ -52,7 +52,7 @@ const Overview = () => {
             </div>
 
             <div className="recomendations">
-                <h1 className='mb-2 font-semibold text-lg'>Recommendations</h1>
+                <h1 className='mb-2 text-lg'>Recommendations</h1>
                 <div className="cards overflow-x-auto  flex gap-4">
                     {info.recommendations.map(item => (
                         <div className="card">
