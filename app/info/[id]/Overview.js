@@ -15,7 +15,7 @@ const Overview = () => {
     }
 
     return (
-        <div className="overview mb-44 min-h-fit max-w-6xl md:mx-auto overflow-hidden m-4 mt-8 space-y-8 ">
+        <div className="overview mb-16 min-h-fit max-w-6xl md:mx-auto overflow-hidden m-4 mt-8 space-y-8 ">
             <div className="description bg-zinc-800 p-4 pb-0 rounded-lg">
                 <div className="para overflow-hidden" style={{ height: showMe ? "max-content" : "100px" }} >
                     {parse(`<p className='opacity-80 text-sm tracking-wide mb-4 mx-auto max-w-prose '>${info.description}</p>`)}
