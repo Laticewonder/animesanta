@@ -1,14 +1,14 @@
 'use client'
 
 import Image from 'next/image';
-import info from '../../../data/info.json'
+// import info from '../../../data/info.json'
 import parse from 'html-react-parser';
 import { useState } from 'react';
 
 
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
-const Overview = () => {
+const Overview = ({info}) => {
 
     const [showMe, setShowMe] = useState(false);
     function toggle() {
@@ -29,11 +29,11 @@ const Overview = () => {
                 <h1 className='mb-2 text-lg select-none'>Relations</h1>
                 <div className="cards flex gap-4">
                     {info.relations.map(item => (
-                        <div className="card">
+                        <div className="card w-28">
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} layout='fill' className='object-cover' />
                             </div>
-                            <h1 className=''>{item.title.userPreferred}</h1>
+                            <h1 className='title-third'>{item.title.userPreferred}</h1>
                         </div>
                     ))}
                 </div>
@@ -61,7 +61,7 @@ const Overview = () => {
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} layout='fill' className='object-cover select-none' />
                             </div>
-                            <h1 className='title-third'>{item.title.userPreferred}</h1>
+                            <h1 className='title-third line-clamp-2'>{item.title.userPreferred}</h1>
                         </div>
                     ))}
                 </div>

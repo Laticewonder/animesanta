@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import info from '../../../data/info.json'
+// import info from '../../../data/info.json'
 import { GoPrimitiveDot } from 'react-icons/go';
 import Link from 'next/link';
 
-const Header = ({params:id}) => {
+const Header = ({info}) => {
     return (
         <div className="header w-full relative mb-4 lg:mb-8 select-none">
             <div className="cover w-full h-60 md:h-72 lg:h-80 relative ">
@@ -12,7 +12,7 @@ const Header = ({params:id}) => {
             </div>
 
             <div className="info max-h-fit mx-auto lg:h-60 max-w-6xl flex relative bottom-16 items-end px-2 tracking-wider -mb-8 z-20">
-                <div className="image relative w-36 h-52 lg:w-44 lg:h-64 rounded-2xl truncate border-4 border-zinc-900 shrink-0 ">
+                <div className="image relative w-36 h-52 lg:w-52 lg:h-72 rounded-2xl truncate border-4 border-zinc-900 shrink-0 ">
                     <Image src={info.image} alt={info.title.romaji} layout='fill' className='object-cover min-w-max' />
                 </div>
                 <div className="main-info px-2 mb-2 max-h-fit md:ml-2">
@@ -35,9 +35,9 @@ const Header = ({params:id}) => {
                 </div>
             </div>
             <div className="nav flex max-w-xl text-sm mx-auto justify-around mb-4">
-                <Link href={`/info/${id}`}><button className='focus:border-b-2 focus:border-purple-500'>Overview</button></Link>
-                <Link href={`/info/${id}/reviews`}><button className='focus:border-b-2 focus:border-purple-500'>Reviews</button></Link>
-                <Link href={`/info/${id}/EpisodeList`}><button className= 'focus:border-b-2 focus:border-purple-500'>Episodes List</button></Link>
+                <Link href={`/info/${info.id}`}><button className='focus:border-b-2 focus:border-purple-500'>Overview</button></Link>
+                <Link href={`/info/${info.id}/reviews`}><button className='focus:border-b-2 focus:border-purple-500'>Reviews</button></Link>
+                <Link href={`/info/${info.id}/EpisodeList`}><button className= 'focus:border-b-2 focus:border-purple-500'>Episodes List</button></Link>
             </div>
         </div>
     );
