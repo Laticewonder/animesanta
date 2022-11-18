@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image';
+import Link from 'next/link';
 // import info from '../../../data/info.json'
 import parse from 'html-react-parser';
 import { useState } from 'react';
@@ -57,12 +58,12 @@ const Overview = ({info}) => {
                 <h1 className='mb-2 text-lg select-none'>Recommendations</h1>
                 <div className="cards overflow-x-auto  flex gap-4">
                     {info.recommendations.map(item => (
-                        <div className="card">
+                        <Link href={`/info/${item.id}`}><div className="card" key={item.id}>
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} layout='fill' className='object-cover select-none' />
                             </div>
                             <h1 className='title-third line-clamp-2'>{item.title.userPreferred}</h1>
-                        </div>
+                        </div></Link>
                     ))}
                 </div>
             </div>

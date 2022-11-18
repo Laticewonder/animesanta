@@ -1,16 +1,11 @@
-import info from '../../../../data/info.json'
+// import info from '../../../../data/info.json'
 import List from './List';
-import { META } from "@consumet/extensions"
 
-const anilist = new META.Anilist();
-
-const Episodes = async ({params: {id}}) => {
-
-    const info = await anilist.fetchAnimeInfo(id).then(data =>(data))
-
+export const revalidate = 30;
+const Episodes = async ({params:{id}}) => {
     return (
         <div className="episodes">
-            <List info = {info}/>
+            <List id={id}/>
         </div>
     );
 }

@@ -5,16 +5,17 @@ import { Suspense } from "react";
 import Overview from './Overview';
 import Loading from './loading';
 
-import { META } from "@consumet/extensions"
+// import { META } from "@consumet/extensions"
 
-const anilist = new META.Anilist();
+// const anilist = new META.Anilist();
 
 
-export const revalidate = 60;
 
 const Info =  async ({params:{id}}) => {
 
-    const info = await anilist.fetchAnimeInfo(id).then(data => (data))
+    // const info = await anilist.fetchAnimeInfo(id).then(data => (data))
+    const res = await fetch(`https://api.consumet.org/meta/anilist/info/${id}`,{ next: { revalidate: 60 } })
+    const info = await res.json()
 
     return (
         <div className="info w-full relative ">

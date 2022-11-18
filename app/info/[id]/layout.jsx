@@ -1,19 +1,14 @@
 import Header from "./Header";
-import { META } from "@consumet/extensions"
-
-const anilist = new META.Anilist();
-
+export const revalidate = 30;
 
 export default async function DashboardLayout({ children, params:{id} }) {
-
-  const info = await anilist.fetchAnimeInfo(id).then(data =>(data))
 
   return (
     <section className="">
       {/* Include shared UI here e.g. a header or sidebar */}
       <nav></nav>
-      <div className="children ">
-        <Header info={info}/>
+      <div className="children" style={{display: "contents"}}>
+        <Header id={id}/>
         {children}
       </div>
     </section>

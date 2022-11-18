@@ -1,8 +1,15 @@
-import trend from '../data/trend.json'
+// import trend from '../data/trend.json'
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Trending = () => {
+// import { META } from "@consumet/extensions"
+
+// const anilist = new META.Anilist();
+
+const Trending = async () => {
+    // const trend = await anilist.fetchTrendingAnime().then(data => data)
+    const res = await fetch('https://api.consumet.org/meta/anilist/trending',{ next: { revalidate: 60 } })
+    const trend = await res.json()
     return (
         <div className="trend w-full max-h-fit flex flex-wrap gap-x-4 gap-y-8">
             {trend.results.map(anime => (
