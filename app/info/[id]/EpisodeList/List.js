@@ -11,7 +11,7 @@ const List = ({info}) => {
                         <div className="image w-full h-28 relative rounded-lg truncate">
                             <Image src={ep.image} layout='fill' className='object-cover' />
                         </div>
-                        <h1 className='title-third line-clamp-2' >{ep.number}.{ep.title}</h1>
+                        <h1 className='title-third line-clamp-2' ><span className='text-purple-500'>{ep.number}.</span> {ep.title}</h1>
 
                     </div>
                 ))}
