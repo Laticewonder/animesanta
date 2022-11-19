@@ -6,7 +6,8 @@ const Watch = async ({params:{id}}) => {
         
         <div className="watch">
             {/* <video src={data.headers.Referer} className='w-[1100px] h-[650px]'></video> */}
-            <iframe src={data.headers.Referer} className='w-[1100px] h-[650px]' allow="fullscreen" frameborder="0"></iframe>
+            <iframe src={data.headers.Referer} className='w-[1100px] h-[650px]' allow="fullscreen" frameborder="0" sandboxscrolling="no"
+             allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" sandbox="allow-scripts"></iframe>
         </div>
     );
 }
