@@ -58,7 +58,7 @@ const Overview = ({info}) => {
                 <h1 className='mb-2 text-lg select-none'>Recommendations</h1>
                 <div className="cards overflow-x-auto  flex gap-4">
                     {info.recommendations.map(item => (
-                        <Link href={`/info/${item.id}`}><div className="card" key={item.id}>
+                        <Link href={`/info/${item.id}`} ><div className="card" key={item.id}>
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} layout='fill' className='object-cover select-none' />
                             </div>

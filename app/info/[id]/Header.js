@@ -28,7 +28,7 @@ const Header = async ({id}) => {
                         <h2>{info.type}</h2>
                     </div>
                     <div className="flex space-x-4 text-xs lg:text-sm opacity-80 mb-2 lg:mb-4">
-                        <h1>{info.season.toLocaleLowerCase()} {info.releaseDate}</h1>
+                        <h1>{info.season.toLowerCase()} {info.releaseDate}</h1>
                         <h1 className='line-clamp-2'>{info.studios.toString().replace(",", " & ")}</h1>
                     </div>
                     <div className="flex flex-col text-xs lg:text-sm">
