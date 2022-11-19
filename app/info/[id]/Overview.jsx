@@ -18,13 +18,13 @@ const Overview = ({info}) => {
 
     return (
         <div className="overview mb-16 min-h-fit max-w-6xl md:mx-auto overflow-hidden p-4 space-y-6 ">
-            <div className="description bg-zinc-800 p-4 pt-2 pb-0 rounded-lg">
+            {info.description? <div className="description bg-zinc-800 p-4 pt-2 pb-0 rounded-lg">
                 <div className="para overflow-hidden md:w-3/4 mx-auto" style={{ height: showMe ? "max-content" : "150px" }} >
                     <h1 className='mb-4 p-2 border-b-2 border-purple-500'>Description</h1>
                     {parse(`<p className='opacity-80 text-sm tracking-wide mb-4 mx-auto leading-relaxed'>${info.description}</p>`)}
                 </div>
                 <button onClick={toggle} className='select-none outline-none bg-zinc-800 mx-auto w-full pt-2 text-purple-500'>{showMe ? <IoIosArrowUp className=' w-full text-2xl' /> : <IoIosArrowDown className=' w-full text-2xl' />}</button>
-            </div>
+            </div> :""}
 
             <div className="relations ">
                 <h1 className='mb-2 text-lg select-none'>Relations</h1>
@@ -56,14 +56,14 @@ const Overview = ({info}) => {
 
             <div className="recomendations">
                 <h1 className='mb-2 text-lg select-none'>Recommendations</h1>
-                <div className="cards overflow-x-auto  flex gap-4">
+                <div className="cards overflow-x-auto relative flex ">
                     {info.recommendations.map(item => (
-                        <Link href={`/info/${item.id}`} ><div className="card" key={item.id}>
+                         <Link href={`/info/${item.id}`} >{item.id ?<div className="card mr-4 w-28" key={item.id}>
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} layout='fill' className='object-cover select-none' />
                             </div>
                             <h1 className='title-third line-clamp-2'>{item.title.userPreferred}</h1>
-                        </div></Link>
+                        </div> : <div className='hidden'></div>}</Link> 
                     ))}
                 </div>
             </div>
