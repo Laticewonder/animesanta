@@ -8,7 +8,7 @@ export const getInfo = async (id)=>{
         console.log('from cache')
         return value
     }else{
-        const hours = 24
+        const hours = 1
         const data =  await anilist.fetchAnimeInfo(id).then(data =>(data))
         cache.put(id, data, hours* 1000 *60*60)
         console.log(`fetch ${id}`)
