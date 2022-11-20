@@ -32,7 +32,7 @@ const Overview = ({info}) => {
                     {info.relations.map(item => (
                         <div className="card w-28">
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
-                                <Image src={item.image} layout='fill' className='object-cover' />
+                                <Image src={item.image} fill={true} className='object-cover' />
                             </div>
                             <h1 className='title-third'>{item.title.userPreferred}</h1>
                         </div>
@@ -46,7 +46,7 @@ const Overview = ({info}) => {
                     {info.characters.map((item => (
                         <div className="card">
                             <div className="image select-none w-24 h-24 relative rounded-lg truncate mb-2 ">
-                                <Image src={item.image} layout='fill' className='object-cover' />
+                                <Image src={item.image} fill={true} className='object-cover' />
                             </div>
                             <h1 className='title-third'>{item.name.full}</h1>
                         </div>
@@ -60,7 +60,7 @@ const Overview = ({info}) => {
                     {info.recommendations.map(item => (
                          <Link href={`/info/${item.id}`} >{item.id ?<div className="card mr-4 w-28" key={item.id}>
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
-                                <Image src={item.image} layout='fill' className='object-cover select-none' />
+                                <Image src={item.image} fill={true} alt={item.title.userPreferred} className='object-cover select-none' />
                             </div>
                             <h1 className='title-third line-clamp-2'>{item.title.userPreferred}</h1>
                         </div> : <div className='hidden'></div>}</Link> 

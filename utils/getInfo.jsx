@@ -1,6 +1,8 @@
 import { cache } from "react";
 import { META } from "@consumet/extensions"
 
+export const revalidate = 120;
+
 export const getInfo = cache(async(id) =>{
     const anilist = new META.Anilist();
     const info = await anilist.fetchAnimeInfo(id).then(data =>(data))

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 // import info from '../../../data/info.json'
 import { Suspense } from "react";
-
+import { getInfo } from '../../../utils/getInfo';
 import Overview from './Overview';
 import Loading from './loading';
 
@@ -12,10 +12,10 @@ import Loading from './loading';
 
 
 const Info =  async ({params:{id}}) => {
-
+    const info = await getInfo(id)
     // const info = await anilist.fetchAnimeInfo(id).then(data => (data))
-    const res = await fetch(`https://api.consumet.org/meta/anilist/info/${id}`,{ next: { revalidate: 60 } })
-    const info = await res.json()
+    // const res = await fetch(`https://api.consumet.org/meta/anilist/info/${id}`,{ next: { revalidate: 300 } })
+    // const info = await res.json()
 
     return (
         <div className="info w-full relative ">

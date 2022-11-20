@@ -1,6 +1,9 @@
+import { getInfo } from "../../../utils/getInfo";
+
 const Watch = async ({params:{id}}) => {
-    const res = await fetch(`https://api.consumet.org/meta/anilist/watch/${id}`)
-    const data = await res.json()
+    const info = await getInfo(id)
+    // const res = await fetch(`https://api.consumet.org/meta/anilist/watch/${id}`)
+    // const data = await res.json()
     // console.log(data)
     return (
         
