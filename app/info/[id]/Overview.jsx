@@ -28,14 +28,14 @@ const Overview = ({info}) => {
 
             <div className="relations ">
                 <h1 className='mb-2 text-lg select-none'>Relations</h1>
-                <div className="cards flex gap-4">
+                <div className="cards flex overflow-x-auto gap-4">
                     {info.relations.map(item => (
-                        <div className="card w-28">
+                        <Link href={`/info/${item.id}`}><div className="card w-28" key={item.id}>
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} fill={true} className='object-cover' />
                             </div>
-                            <h1 className='title-third'>{item.title.userPreferred}</h1>
-                        </div>
+                            <h1 className='title-third line-clamp-2'>{item.title.userPreferred}</h1>
+                        </div></Link>
                     ))}
                 </div>
             </div>
@@ -44,11 +44,11 @@ const Overview = ({info}) => {
                 <h1 className='mb-2 text-lg select-none'>Characters</h1>
                 <div className="cards flex overflow-x-auto gap-4 ">
                     {info.characters.map((item => (
-                        <div className="card">
+                        <div className="card" key={item.name.userPreferred}>
                             <div className="image select-none w-24 h-24 relative rounded-lg truncate mb-2 ">
                                 <Image src={item.image} fill={true} className='object-cover' />
                             </div>
-                            <h1 className='title-third'>{item.name.full}</h1>
+                            <h1 className='title-third line-clamp-2'>{item.name.full}</h1>
                         </div>
                     )))}
                 </div>

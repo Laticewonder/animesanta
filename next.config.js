@@ -9,7 +9,7 @@ const nextConfig = withBundleAnalyzer({
   },
   swcMinify: true,
   images: {
-    domains: ["s4.anilist.co", "artworks.thetvdb.com"]
+    domains: ["s4.anilist.co","media.kitsu.io", "artworks.thetvdb.com"]
   }
 })
 

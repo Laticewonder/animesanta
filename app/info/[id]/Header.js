@@ -1,17 +1,13 @@
 import Image from 'next/image';
-// import info from '../../../data/info.json'
 import { getInfo } from '../../../utils/getInfo';
 import { GoPrimitiveDot } from 'react-icons/go';
 import Link from 'next/link';
-// import { META } from "@consumet/extensions"
-
-// const anilist = new META.Anilist();
 
 const Header = async ({id}) => {
+    // const url = 'https://api.consumet.org/meta/anilist/info/'
+    // const mid = await id.toString()
     const info = await getInfo(id)
-    // // const info = await anilist.fetchAnimeInfo(id ).then(data =>(data))
-    // const res = await fetch(`https://api.consumet.org/meta/anilist/info/${id}`,{ next: { revalidate: 300 } })
-    // const info = await res.json()
+
     return (
         <div className="header w-full relative mb-4 lg:mb-8 select-none">
             <div className="cover w-full h-60 md:h-72 lg:h-80 relative ">

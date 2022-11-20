@@ -15,7 +15,7 @@ const Popular = async () => {
             <h1 className='block mb-4 text-2xl'>Popular</h1>
             <div className="cards  flex flex-wrap gap-x-4 gap-y-8">
             {trend.results.map(anime => (
-                <Link href={`/info/${anime.id}`}><div className="card w-44 space-y-2">
+                <Link href={`/info/${anime.id}`}><div className="card w-44 space-y-2" key={anime.id}>
                     <div className="image w-full h-64 relative rounded-xl truncate">
                         <Image src={anime.image} alt={anime.title.userPreferred? anime.title.userPreferred:anime.title.romaji} fill={true} />
                     </div>
