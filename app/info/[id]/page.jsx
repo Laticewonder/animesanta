@@ -1,7 +1,7 @@
 import { getInfo } from '../../../utils/getInfo';
 import Overview from './Overview';
 
-const Info =  async ({params:{id}}) => {
+const Info = async ({ params: { id } }) => {
     let startTime = performance.now()
     const info = await getInfo(id)
     let endTime = performance.now()
@@ -9,7 +9,7 @@ const Info =  async ({params:{id}}) => {
 
     return (
         <div className="info w-full relative ">
-                <Overview info={info}/>
+            <Overview info={info} />
         </div >
     );
 }

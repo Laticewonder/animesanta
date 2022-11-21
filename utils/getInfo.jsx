@@ -1,5 +1,5 @@
 import { META } from "@consumet/extensions"
-import cache from "memory-cache"
+import cache from "memory-cache-pro"
 const anilist = new META.Anilist();
 
 export const getInfo = async (id)=>{ 
