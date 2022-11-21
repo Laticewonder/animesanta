@@ -3,7 +3,7 @@ import cache from "memory-cache"
 const anilist = new META.Anilist();
 
 export const getInfo = async (id)=>{ 
-    const value = cache.get(id)
+    const value = await cache.get(id)
     if(value){
         console.log('from cache')
         return value
