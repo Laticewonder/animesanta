@@ -34,7 +34,7 @@ const Overview = ({info}) => {
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} fill={true} className='object-cover' />
                             </div>
-                            <h1 className='title-third line-clamp-2'>{item.title.userPreferred}</h1>
+                            <h1 className='title-third line-clamp-2'>{item.title.romaji}</h1>
                         </div></Link>
                     ))}
                 </div>
