@@ -1,26 +1,21 @@
 import { META } from "@consumet/extensions"
-import cache from "memory-cache-pro"
+// import cache from "memory-cache-pro"
 const anilist = new META.Anilist();
+import Redis from "ioredis";
+
+let client = new Redis(process.env.REDIS_KEY);
 
 export const getInfo = async (id)=>{ 
-    const value = cache.get(id)
+    const value = client.get(id)
     if(value){
         console.log('from cache')
         return value
     }else{
-        const hours = 1
         const data =  await anilist.fetchAnimeInfo(id).then(data =>(data))
-        cache.put(id, data, hours* 1000 *60*60)
+        client.set(id, data, 24*60*60)
         console.log(`fetch ${id}`)
         return data;
     }
 
 }
 
-
-
-
-// const anilist = new META.Anilist();
-// const info = await anilist.fetchAnimeInfo(id).then(data =>(data))
-// console.log('function ran')
-// return info
