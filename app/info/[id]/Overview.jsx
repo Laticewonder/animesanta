@@ -30,7 +30,7 @@ const Overview = ({info}) => {
                 <h1 className='mb-2 text-lg select-none'>Relations</h1>
                 <div className="cards flex overflow-x-auto gap-4">
                     {info.relations.map(item => (
-                        <Link href={`/info/${item.id}`}><div className="card w-28" key={item.id}>
+                        <Link href={`/info/${item.id}`}><div className="card w-28" key={item.id} prefetch={false}>
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} fill={true} className='object-cover' />
                             </div>
@@ -58,7 +58,7 @@ const Overview = ({info}) => {
                 <h1 className='mb-2 text-lg select-none'>Recommendations</h1>
                 <div className="cards overflow-x-auto relative flex ">
                     {info.recommendations.map(item => (
-                         <Link href={`/info/${item.id}`} >{item.id ?<div className="card mr-4 w-28" key={item.id}>
+                         <Link href={`/info/${item.id}`} >{item.id ?<div className="card mr-4 w-28" key={item.id} prefetch={false}>
                             <div className="image select-none relative w-28 h-40 rounded-md truncate">
                                 <Image src={item.image} fill={true} alt={item.title.userPreferred} className='object-cover select-none' />
                             </div>
